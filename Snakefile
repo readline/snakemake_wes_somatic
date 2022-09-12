@@ -225,21 +225,21 @@ rule som_muse:
     log:
         out = snakedir+"/logs/D05.som_muse/{som}.o",
         err = snakedir+"/logs/D05.som_muse/{som}.e",
-    threads:  4
+    threads:  56
     resources:
-        mem  = '16g',
+        mem  = '128g',
         extra = ' --gres=lscratch:20 ',
     shell:
         '''module load {config[modules][muse]} {config[modules][samtools]}
         MuSE call \
           -f {config[references][fasta]} \
+          -n {threads} \
+          -O {params.prefix} \
           {input.bam1} \
-          {input.bam0} \
-          -l {config[references][flankbed]} \
-          -O {params.prefix} > {log.out} 2> {log.err}
+          {input.bam0} > {log.out} 2> {log.err}
         MuSE sump \
           -I {params.prefix}.MuSE.txt \
-          -G \
+          -E \
           -D {config[references][snp138]} \
           -O {params.prefix}.MuSE.vcf >> {log.out} 2>> {log.err}
         bgzip {params.prefix}.MuSE.vcf

@@ -2,7 +2,7 @@ samplesheet:
     samplesheet.tsv
 
 workdir:
-    /data/yuk5/project/1.FPDMM/01.WES/Pipe_210329
+    /data/yuk5/project/2.iPSC_MutSeq/21.EMK
 
 references:
     species:  homo_sapiens
@@ -12,11 +12,12 @@ references:
     bwaidx:   /data/yuk5/pipeline/wgs_germline/ref/gatk_bundle_hg38_v0/Homo_sapiens_assembly38.fasta
     fadict:   /data/yuk5/pipeline/wgs_germline/ref/gatk_bundle_hg38_v0/Homo_sapiens_assembly38.fasta.dict
     itvlist:  /data/yuk5/pipeline/wgs_germline/ref/gatk_bundle_hg38_v0/wgs_evaluation_regions.hg38.interval_list
-    wesbed:   /data/yuk5/pipeline/wxs_phase1/ref/IDT_xGen_Exome_Research_Panel/hg38/xGen_Exome_Research_Panel.targets.hg38.bed
-    wesbedgz:   /data/yuk5/pipeline/wxs_phase1/ref/IDT_xGen_Exome_Research_Panel/hg38/xGen_Exome_Research_Panel.targets.hg38.bed.gz
-    flankbed: /data/yuk5/pipeline/wxs_phase1/ref/IDT_xGen_Exome_Research_Panel/hg38/xGen_Exome_Research_Panel.targets.withflank150.hg38.bed
-    flankbedgz: /data/yuk5/pipeline/wxs_phase1/ref/IDT_xGen_Exome_Research_Panel/hg38/xGen_Exome_Research_Panel.targets.withflank150.hg38.bed.gz
-    flankitv: /data/yuk5/pipeline/wxs_phase1/ref/IDT_xGen_Exome_Research_Panel/hg38/xGen_Exome_Research_Panel.targets.withflank150.hg38.bed.intervals
+
+    wesbed:   /data/yuk5/project/2.iPSC_MutSeq/21.EMK/ref/hg38/TruSeq_Exome_TargetedRegions_v1.2.hg38.bed
+    wesbedgz:   /data/yuk5/project/2.iPSC_MutSeq/21.EMK/ref/hg38/TruSeq_Exome_TargetedRegions_v1.2.hg38.bed.gz
+    flankbed:   /data/yuk5/project/2.iPSC_MutSeq/21.EMK/ref/hg38/TruSeq_Exome_TargetedRegions_v1.2.withflank150.hg38.bed
+    flankbedgz:   /data/yuk5/project/2.iPSC_MutSeq/21.EMK/ref/hg38/TruSeq_Exome_TargetedRegions_v1.2.withflank150.hg38.bed.gz
+    flankitv:   /data/yuk5/project/2.iPSC_MutSeq/21.EMK/ref/hg38/TruSeq_Exome_TargetedRegions_v1.2.withflank150.hg38.bed.intervals
     interval: 17
     gatk_dbsnp:  /data/yuk5/pipeline/wgs_germline/ref/Homo_sapiens_assembly38.dbsnp138.vcf.gz
     gatk_1000g:  /data/yuk5/pipeline/wgs_germline/ref/Mills_and_1000G_gold_standard.indels.hg38.vcf.gz
@@ -52,7 +53,7 @@ modules:
     strelka: strelka/2.9.0
     gatk: GATK/4.2.0.0
     lofreq: lofreq/2.1.5
-    muse: muse/1.0~rc-c
+    muse: muse/2.0
     varscan: varscan/2.4.3
     canvas: Canvas/1.40
 bins:
