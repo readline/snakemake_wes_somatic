@@ -225,7 +225,7 @@ rule som_muse:
     log:
         out = snakedir+"/logs/D05.som_muse/{som}.o",
         err = snakedir+"/logs/D05.som_muse/{som}.e",
-    threads:  56
+    threads:  48
     resources:
         mem  = '128g',
         extra = ' --gres=lscratch:20 ',
