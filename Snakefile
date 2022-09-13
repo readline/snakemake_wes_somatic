@@ -225,9 +225,9 @@ rule som_muse:
     log:
         out = snakedir+"/logs/D05.som_muse/{som}.o",
         err = snakedir+"/logs/D05.som_muse/{som}.e",
-    threads:  48
+    threads:  36
     resources:
-        mem  = '128g',
+        mem  = '48g',
         extra = ' --gres=lscratch:20 ',
     shell:
         '''module load {config[modules][muse]} {config[modules][samtools]}
